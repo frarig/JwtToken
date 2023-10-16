@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version "${springBootVersion}"
+    id 'io.spring.dependency-management' version "${springDependencyManagement}"
+}
+
+group = 'com.arthurfrei'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+    implementation "org.springframework.boot:spring-boot-starter-security"
+
+    implementation "javax.xml.bind:jaxb-api:${javaxXmlBindJaxbApiVersion}"
+    implementation "io.jsonwebtoken:jjwt:${jsonWebTokenVersion}"
+    implementation "org.liquibase:liquibase-core:${liquibaseVersion}"
+
+    runtimeOnly "org.postgresql:postgresql:${postgresVersion}"
+
+    implementation "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

@@ -1,0 +1,315 @@
+databaseChangeLog:
+  - changeSet:
+      id: insertIntoUsers
+      author: ArthurFrey
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'user@user.com'
+              - column:
+                  name: first_name
+                  value: 'user'
+              - column:
+                  name: last_name
+                  value: 'user'
+              - column:
+                  name: password
+                  value: '$2a$10$ocf80WQeBKwoAT6HekwFeu6jm2jWGP94P4YqIxa5dwjv/k.mAQqPm'
+              - column:
+                  name: username
+                  value: 'user'
+            schemaName: public
+            tableName: users
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'admin@admin.com'
+              - column:
+                  name: first_name
+                  value: 'admin'
+              - column:
+                  name: last_name
+                  value: 'admin'
+              - column:
+                  name: password
+                  value: '$2a$10$NgSNU0P5yF577FdDuNidFu30J8G6o4dH41ZKP/YJrs4f77S6B0l8u'
+              - column:
+                  name: username
+                  value: 'admin'
+            schemaName: public
+            tableName: users
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'NOT_ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'admin2@admin.com'
+              - column:
+                  name: first_name
+                  value: 'admin2'
+              - column:
+                  name: last_name
+                  value: 'admin2'
+              - column:
+                  name: password
+                  value: '$2a$10$U1b2yvXE9MiaQQUJcEfJ8e7W5hYLbuLJZTCmFBLDZBAEQ2y4Vp89.'
+              - column:
+                  name: username
+                  value: 'admin2'
+            schemaName: public
+            tableName: users
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'DELETE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'admin3@admin.com'
+              - column:
+                  name: first_name
+                  value: 'admin3'
+              - column:
+                  name: last_name
+                  value: 'admin3'
+              - column:
+                  name: password
+                  value: '$2a$10$bEUO/t2g6cLShEMdWVeM4uk5czsqkrdFJRYnrKDPTKjeckSmwGoQW'
+              - column:
+                  name: username
+                  value: 'admin3'
+            schemaName: public
+            tableName: users
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'user2@user.com'
+              - column:
+                  name: first_name
+                  value: 'user2'
+              - column:
+                  name: last_name
+                  value: 'user2'
+              - column:
+                  name: password
+                  value: '$2a$10$ExD2M7Ewy22A0rdPN9s3XORqiLFRz3HmFPJtKyLfB6yRobtxaFK2i'
+              - column:
+                  name: username
+                  value: 'user2'
+            schemaName: public
+            tableName: users
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'NOT_ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'user3@user.com'
+              - column:
+                  name: first_name
+                  value: 'user3'
+              - column:
+                  name: last_name
+                  value: 'user3'
+              - column:
+                  name: password
+                  value: '$2a$10$fd5R80/B.rnxrdh.Lg9.V.9mD3Jv3/U6CT6qyFVCWziK4kYjR649W'
+              - column:
+                  name: username
+                  value: 'user3'
+            schemaName: public
+            tableName: users
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'user4@user.com'
+              - column:
+                  name: first_name
+                  value: 'user4'
+              - column:
+                  name: last_name
+                  value: 'user4'
+              - column:
+                  name: password
+                  value: '$2a$10$jvL7AodIpNHkQFE.w7eBO.CrKbdiT3lnjDTKIu93e5YwI3jx2dhH.'
+              - column:
+                  name: username
+                  value: 'user4'
+            schemaName: public
+            tableName: users
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 8
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'DELETE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'user5@user.com'
+              - column:
+                  name: first_name
+                  value: 'user5'
+              - column:
+                  name: last_name
+                  value: 'user5'
+              - column:
+                  name: password
+                  value: '$2a$10$DuxdK3AnJhYIK8.u2UTgdek2Lrr9pH1SQOy1h9THHKcKu1nkUkKEq'
+              - column:
+                  name: username
+                  value: 'user5'
+            schemaName: public
+            tableName: users
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 9
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'NOT_ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'user6@user.com'
+              - column:
+                  name: first_name
+                  value: 'user6'
+              - column:
+                  name: last_name
+                  value: 'user6'
+              - column:
+                  name: password
+                  value: '$2a$10$g5YpkaamEV6TThosrMFEy.sSOH1B54gSVPK9G8S9LK4bRE.sNiVF6'
+              - column:
+                  name: username
+                  value: 'user6'
+            schemaName: public
+            tableName: users
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 10
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: email
+                  value: 'user7@user.com'
+              - column:
+                  name: first_name
+                  value: 'user7'
+              - column:
+                  name: last_name
+                  value: 'user7'
+              - column:
+                  name: password
+                  value: '$2a$10$9WJ4vUc4O3Ye5U9M/qHi4e8yxPWDDh3B.ky2DeiundZ.0RQgakGwy'
+              - column:
+                  name: username
+                  value: 'user7'
+            schemaName: public
+            tableName: users

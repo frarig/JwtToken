@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-roles-table.yml
+  - include:
+      file: db/changelog/changeset/create-user_role-table.yml
+  - include:
+      file: db/changelog/changeset/create-users-table.yml
+  - include:
+      file: db/changelog/changeset/add-foreign-key-role-id.yml
+  - include:
+      file: db/changelog/changeset/add-foreign-key-user-id.yml
+  - include:
+      file: db/changelog/changeset/insert-into-roles.yml
+  - include:
+      file: db/changelog/changeset/insert-into-users.yml
+  - include:
+      file: db/changelog/changeset/insert-into-user_role.yml

@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-foreign-key-role-id
+      author: ArthurFrey
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: user_role
+            baseColumnNames: role_id
+            referencedTableName: roles
+            referencedColumnNames: id
+            constraintName: FKt7e7djp752sqn6w22i6ocqy6q

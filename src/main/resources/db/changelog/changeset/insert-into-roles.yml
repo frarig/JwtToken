@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: insertIntoRoles
+      author: ArthurFrey
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: name
+                  value: 'ROLE_USER'
+            schemaName: public
+            tableName: roles
+        - insert:
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: created
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: status
+                  value: 'ACTIVE'
+              - column:
+                  name: updated
+                  value: '2023-10-11 09:00:00'
+              - column:
+                  name: name
+                  value: 'ROLE_ADMIN'
+            schemaName: public
+            tableName: roles

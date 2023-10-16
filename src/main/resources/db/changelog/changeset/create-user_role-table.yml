@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-role-table
+      author: ArthurFrey
+      changes:
+        - createTable:
+            tableName: user_role
+            columns:
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false

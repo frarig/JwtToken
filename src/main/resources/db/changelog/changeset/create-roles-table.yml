@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-roles-table
+      author: ArthurFrey
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated
+                  type: TIMESTAMP
+              - column:
+                  name: status
+                  type: VARCHAR(255)
+                  constraints:
+                    checkConstraint: "status IN ('ACTIVE', 'NOT_ACTIVE', 'DELETE')"
+                    nullable: false
