@@ -30,7 +30,7 @@ public interface UserService {
 
     User findById(Long id);
 
-    void delete(Long id);
+    boolean delete(Long id);
 
     @Slf4j
     @Service
@@ -134,19 +134,23 @@ public interface UserService {
         }
 
         @Override
-        public void delete(Long id) {
+        public boolean delete(Long id) {
             Optional<User> optionalUser = userRepository.findById(id);
 
             if (optionalUser.isEmpty()) {
                 log.warn("IN delete - user with id: {} not found", id);
-                return;
+                return false;
             }
 
             User user = optionalUser.get();
+
+            if (user.getStatus() == Status.DELETE) return false;
+
             user.setStatus(Status.DELETE);
 
             log.info("IN delete - user with id: {} is marked as deleted", id);
             userRepository.save(user);
+            return true;
         }
     }
 
