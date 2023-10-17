@@ -27,6 +27,7 @@ public class UserV1Controller {
 
         return ResponseEntity.ok(new UserDto(user));
     }
+
     @PostMapping(CREATE_USER)
     public ResponseEntity<UserDto> register(@RequestBody NewUserDto userDto) {
         final User register = userService.register(userDto);

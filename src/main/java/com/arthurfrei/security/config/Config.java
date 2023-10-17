@@ -25,9 +25,13 @@ public class Config {
 
     private static final String ADMIN_ENDPOINT_V1 = "/api/v1/admin/**";
 
+    private static final String USER_ENDPOINT_V1 = "/api/v1/users/**";
+
     private static final String LOGIN_ENDPOINT_V1 = "/api/v1/auth/login";
 
     private static final String ADMIN = "ADMIN";
+
+    private static final String USER = "USER";
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
@@ -50,6 +54,7 @@ public class Config {
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers(CREATE_USER_V1).permitAll()
                         .requestMatchers(LOGIN_ENDPOINT_V1).permitAll()
+                        .requestMatchers(USER_ENDPOINT_V1).hasRole(USER)
                         .requestMatchers(ADMIN_ENDPOINT_V1).hasRole(ADMIN)
                         .anyRequest().authenticated()
                 )
