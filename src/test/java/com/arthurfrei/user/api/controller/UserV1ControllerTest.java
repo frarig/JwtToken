@@ -65,6 +65,7 @@ class UserV1ControllerTest {
     }
 
     @Test
+    @DisplayName("Регистрация новой учетки")
     void register() {
         String username = "username";
         String firstName = "firstName";
